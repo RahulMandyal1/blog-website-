@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List of all the articles</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h2>Blog.app</h2>
+      </div>
+      <div class="cta-btn">
+        <a href="/" class="previous">Home</a>
+      </div>
+    </header>  
+    <main>
+      <section class="article-form">
+        <div class="container">
+          <form action="/articles/<%=article._id %>/" method="POST">
+            <input
+              type="text"
+              class="inputbox"
+              name="title"
+              placeholder="Enter article title"
+              value="<%=article.title %>"
+            />
+            <input
+              type="text"
+              class="inputbox"
+              name="description"
+              placeholder="enter article description here .."
+              value="<%=article.description %>"
+            />
+            <input
+              type="text"
+              name="tags"
+              placeholder="tags here ..."
+              value="<%=article.tags %>"
+            />
+            <input
+              type="text"
+              name="author"
+              placeholder="enter author name"
+              value="<%= article.author %>"
+            />
+            <input
+              type="submit"
+              value="submit"
+            />
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
